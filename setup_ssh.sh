@@ -14,4 +14,10 @@ for node in worker1 worker2 worker3; do
         chmod 600 /home/mpiuser/.ssh/authorized_keys
     "
 done
+
+docker compose exec master bash -c "
+  echo -e 'Host worker1 worker2 worker3\n
+  StrictHostKeyChecking no' >> /home/mpiuser/.ssh/config
+"
+
 echo "SSH configurado."
