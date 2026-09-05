@@ -81,6 +81,6 @@ msgs = comm.gather(msgs, root=0)
 #
 # Nós Master
 # Imprime os resultados de cada nó worker e seu também
+
 if rank == 0:
-    for m in msgs:
-        print(m)
+    [print(m) for m in msgs]
