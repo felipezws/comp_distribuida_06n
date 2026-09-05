@@ -44,7 +44,7 @@ def gerar_logs(qtd):
 # Processo 0 gera o dataset
 #
 logs_locais = []
-TOTAL_LOGS = 4
+TOTAL_LOGS = 100000
 if rank == 0:
     print("\nGerando dataset de logs...\n") 
     logs = gerar_logs(TOTAL_LOGS)   
